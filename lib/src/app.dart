@@ -8,9 +8,14 @@ class App extends StatelessWidget {
     return Provider(
         child: MaterialApp(
           title: 'Login In',
-          home: Scaffold(
-            body: LoginScreen(),
-          ),
+          onGenerateRoute: (RouteSettings settings) {
+            return MaterialPageRoute(
+              builder: (BuildContext context) {
+                return LoginScreen();
+              },
+            );
+          },
+          home: LoginScreen(),
         ),
     );
   }
