@@ -16,7 +16,7 @@ class Validators {
       if (password.length > 6) {
         sink.add(password);
       } else {
-        sink.addError('Password must be at least 6 characters long');
+        sink.addError('Must be at least 6 characters');
       }
     }
   );
